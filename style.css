@@ -1,0 +1,145 @@
+/* NASA Picture of the Day CSS 
+color palette: #212121 (dark background), #0B3D91 (controls), #FFFFFF (text), #1F4277 (border)
+NASA Color palette: https://nasa.github.io/nasawds-site/components/colors/ */
+
+/* reset and base styles */
+body {
+    background-image: url("images/a15pan11845-7.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+}
+/* font import */
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* layout */
+.site-header {
+    text-align: center;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.title{
+    text-align: center;
+    color: #ffffff;
+    padding: 20px 0
+}
+.app-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap:20px; 
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    align-items: center;
+}
+.controls {
+    background-color: #061f4a;
+    padding: 20px;
+    border: solid 6px #1F4277;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: .95;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.picture-display {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* font styles */
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#picture-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#picture-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 15px;
+    text-align: justify;
+}
+/* picture section */
+#picture-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+/* button and input styles */
+.label-text {
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    font-size: 25px;
+    padding-bottom: 10px;
+    display: block;
+}
+.date-input {
+    margin-top: 15px;
+    margin-bottom: 2em;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 15.55em;
+    height: 3em;
+}
+
+.icon-btn{
+    width: 15em;
+    height:5em;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 2em;
+
+    min-width: 44px;
+    min-height: 44px;
+
+    display: inline-grid;
+    place-items: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    background-color: #0b3d91;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    transition: transform 80ms ease, filter 120ms ease, opacity 120ms ease;
+}
+.label-txt,.icon-btn:hover{
+    filter: brightness(0.95);
+    background-color: #0b3d91;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: solid 2px #105bd8;
+    transform: translate(-1px);
+}
