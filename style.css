@@ -125,10 +125,9 @@ body {
 
     display: inline-grid;
     place-items: center;
-
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-    background-color: #0b3d91;
+    background-color: #0B3D91;
     color: #ffffff;
     cursor: pointer;
     font-size: 18px;
@@ -136,10 +135,21 @@ body {
     transition: transform 80ms ease, filter 120ms ease, opacity 120ms ease;
 }
 .label-txt,.icon-btn:hover{
-    filter: brightness(0.95);
-    background-color: #0b3d91;
     color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: solid 2px #105bd8;
+    border: solid 3px #105bd8;
     transform: translate(-1px);
+}
+.icon-btn:active{
+    transform: translate(1px);
+    background-color: #061f4a;
+    border: solid 2px #105bd8;
+}
+.icon-btn:disabled{
+    background-color: #888888;
+    color: #cccccc;
+    cursor: not-allowed;
+    border: none;
+    box-shadow: none;
+    transform: none;
 }

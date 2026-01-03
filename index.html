@@ -23,18 +23,21 @@
             <div class="controls">
                 <section id="form-section">
                     <form id="date-form">
-                        <label class="label-text inter"for="date-input">Pick a Day</label>
-                        <input type="date" class="date-input" name="date-input" required>
+                        <label class="label-text inter"for="date-selector">Pick a Day</label>
+                        <input type="date" id="date-selector"class="date-input" name="date-input" required>
 
                         <!-- Button Row : Microcopy and Icon buttons Source: 
                          https://makeitclear.com/ux-ui-tips-a-guide-to-creating-buttons/
                          -->
                         <div class="button-row">
-                            <button type="submit" id="get-picturebtn" class="icon-btn inter" disabled title="GET APOD for selected Date">
-                                Get Picture of the Day (APOD)
+                            <button type="submit" id="apodBtn" class="icon-btn inter" disabled title="GET APOD for selected Date">
+                                Astronomy Picture of the Day (APOD)
                             </button>
-                            <button id="randomBtn" class="icon-btn inter" disabled title="Random APOD">
-                                What's Today's Space Vibe?
+                            <button type ="button" id="astroidBtn" class="icon-btn inter" disabled title="Astroids Near Earth">
+                                Astroids Near Earth
+                            </button>
+                            <button type="button" id="earthBtn" class="icon-btn inter" disabled title="Earth Events">
+                                Earth Events
                             </button>
                         </div>
                     </form>
@@ -46,17 +49,17 @@
                     <div class="image-container">
                         <img id="picture-image" src="" alt="NASA Picture of the Day">
                     </div>
-                    <p id="picture-explanation"></p>
+                    <p id="picture-description"></p>
                 </section>
             </div>
-            <footer>
-                <p class="inter">Data provided by NASA's APOD API.</p>
-            </footer>
         </div>
+    <footer>
+        <p class="inter">Data provided by NASA's APOD API.</p>
+    </footer>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <script src="app.js" async defer></script>
+        <script type="module"src="app.js"></script>
     </body>
 </html>
